@@ -87,5 +87,8 @@ RUN cd $PROGRAMS_DIR/JetToyHI/PU14 && \
 RUN cd $PROGRAMS_DIR/JetToyHI  && \
     ./runFromFile -hard samples/PythiaEventsTune14PtHat120.pu14 -pileup samples/ThermalEventsMult12000PtAv0.70.pu14 -nev 10
 
+# clean up
+RUN rm $PROGRAMS_DIR/*gz
+
 # overwrite root dockers tendancy to launch root
 CMD /bin/bash
